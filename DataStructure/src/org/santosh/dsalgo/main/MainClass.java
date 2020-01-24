@@ -1,4 +1,4 @@
-package org.santosh.dsalgo.java;
+package org.santosh.dsalgo.main;
 
 public class MainClass {
 	
