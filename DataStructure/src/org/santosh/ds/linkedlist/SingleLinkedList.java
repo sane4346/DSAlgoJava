@@ -1,5 +1,5 @@
 package org.santosh.ds.linkedlist;
-import java.util.Scanner;
+
 
 
 public class SingleLinkedList {
@@ -70,6 +70,19 @@ public class SingleLinkedList {
 		return true;
 		
 	}
+	public Boolean findReferenceToSecondLastNode() {
+		
+		Node p = start;
+		
+		while(p.link.link != null ) {
+			
+			p = p.link;
+		}
+		System.out.print("last reference = " + p.link);
+		
+		return true;
+		
+	}
 	 public Boolean findReferenceToGivenValue(int x) {
 		 
 		 Node p = start; 
@@ -81,6 +94,28 @@ public class SingleLinkedList {
 		 if (p.link == null)
 			 return false;
 		 System.out.println("referece to given value" + x + "is  " + p.link);
+		 return true;
+	 }
+	 public Boolean findReferenceToPredecessorofGivenInfo(int x) {
+		 
+		 Node p = start; 
+		 
+		 while(p.link.link != null) {
+			 if (p.link.link.info == x)
+				 break;
+		 }
+		 if (p.link.link == null)
+			 return false;
+		 System.out.println("referece to given value" + x + "is  " + p.link);
+		 return true;
+	 }
+	 
+	 public Boolean findReferenceToNodeAtGivenPostion(int position) {
+		 Node p = start;
+		 int i ;
+		 for(i = 1; i < position && p != null;i++) {
+			 p = p.link;
+		 }
 		 return true;
 	 }
 
