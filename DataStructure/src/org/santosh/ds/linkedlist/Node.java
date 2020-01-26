@@ -7,6 +7,7 @@ public class Node {
 	
 	public Node(int i) {
 		this.info = i;
+		this.link = null;
 	}
 
 }
