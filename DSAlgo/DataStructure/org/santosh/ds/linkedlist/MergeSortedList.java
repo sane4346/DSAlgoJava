@@ -29,20 +29,21 @@ public class MergeSortedList {
 			
 		}
 		
-
+		//if second list has reached at end
 		while(p != null) {
 			temp.link = new Node(p.info);
 			p  = p.link;
 			temp = temp.link;
 		}
-			while(q != null) {
-				temp.link = new Node(q.info);
-				q  = q.link;
-				temp = temp.link;
-			}
+		//if first list has reached at end..traverse through remaining nodes of second list
+		while(q != null) {
+			temp.link = new Node(q.info);
+			q  = q.link;
+			temp = temp.link;
+		}
 
 		
-		return p;
+		return startM;
 	}
 	
 	public Node mergeByLink(Node p, Node q) {
@@ -71,10 +72,10 @@ public class MergeSortedList {
 			temp = temp.link;
 			
 		}
-		if (p == null) {
-			temp.link = q.link;
+		if (p == null) { // if first list has ended.. we simply assign link of temporary list's link to second list.
+			temp.link = q;
 		} else {
-			temp.link = p.link;
+			temp.link = p;
 		}
 		
 		return startM;
