@@ -1,15 +1,22 @@
 package org.santosh.ds.linkedlist;
 
-
+import java.util.Scanner;
 
 public class SingleLinkedList {
 	
 	private Node start;
 	
+	public Node getStart() {
+		return start;
+	}
+
+	public void setStart(Node start) {
+		this.start = start;
+	}
+
 	public SingleLinkedList() {
 		start = null;
 	}
-	
 	
 	public void displayList() {
 		Node p;
@@ -214,7 +221,20 @@ public class SingleLinkedList {
 		 }
 		 
 	 }
+	 public void createList() {
+		 int n,data;
+		 System.out.print("Enter numbers of elements in linked list:");
+		 Scanner scan = new Scanner(System.in);
+		 n = scan.nextInt();
+		 System.out.println("Enter elements of linked list:");
+		 for(int i = 0; i< n; i++) {
+			 data = scan.nextInt();
+			 insertAtEnd(data);
+		 }
+		 
+	 }
 	 
+	 //MARK :- Delete
 	 public void deleteStartNode() {
 		 
 		 
