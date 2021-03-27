@@ -231,7 +231,7 @@ public class SingleLinkedList {
 			 data = scan.nextInt();
 			 insertAtEnd(data);
 		 }
-		 
+		 scan.close();
 	 }
 	 
 	 //MARK :- Delete
